@@ -35,7 +35,9 @@ __Step 3__: Create the container
 __Step 4__: Setup the database
 > Note: install.php will import our db
 ```
-> http://127.0.0.1/install.php
+> http://127.0.0.1/install.php 
+  OR 
+> curl http://localhost/install.php //on your docker machine
 ```
 
 __Step 5__: Interact with the site
@@ -49,7 +51,7 @@ __Step 5__: Interact with the site
 
 
 __Step 1__: Pull and Run the image
-> Note: nevishs/lamp-server -> repo
+> Note: nevishs/lamp-server -> repo name, 83962226cfc5 -> image id
 ```
 > docker pull nevishs/lamp-server
 > docker run --name 83962226cfc5 -d -p 80:80 -p3306:3306 -v /tmp/DockerLamp/www:/var/www nevishs/lamp-server
@@ -57,4 +59,11 @@ __Step 1__: Pull and Run the image
 > http://127.0.0.1/public/
 ```
 
+## Useful Commands:
+```
+> docker image ls         //lists all the images, this command is useful to find the repo name and image id
+> docker container ps -a  //lists all the containers
+> docker stop CONTAINERID //stops the container
+> docker rm CONTAINERID   //destroys the container
+```
 
