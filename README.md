@@ -11,11 +11,15 @@ OR
 
 * _Pull and Run the image from docker HUB._
 
+OR 
+
+* _Run the whole steps in one click_
+
 ## Instructions:
 
 __Step 1__: Clone the necessary files
 > Note: /tmp/DockerLamp -> working folder
-```docker
+```
 > git clone https://github.com/nevishs/DockerLamp.git /tmp/DockerLamp
 > cd /tmp/DockerLamp
 ```
@@ -50,7 +54,14 @@ __Step 5__: Interact with the site
 ### OR
 
 
-__Step 1__: Pull and Run the image
+__Step 1__: Prepare the files
+> Note: /tmp/DockerLamp -> working folder
+```
+> git clone https://github.com/nevishs/DockerLamp.git /tmp/DockerLamp
+> cd /tmp/DockerLamp
+```
+
+__Step 2__: Pull and Run the image
 > Note: nevishs/lamp-server -> repo name, 83962226cfc5 -> image id
 ```
 > docker pull nevishs/lamp-server
@@ -58,6 +69,36 @@ __Step 1__: Pull and Run the image
 > http://127.0.0.1/install.php
 > http://127.0.0.1/public/
 ```
+
+
+### OR
+
+
+__Step 1__: Create script
+> Note: dokcerlamp.sh -> scirpt name
+```
+> nano dokcerlamp.sh
+> chmod 755 dockerlamp.sh
+```
+
+__Step 2__: Prepare the script
+> Note: copy paste the following to the dockerlamp.sh 
+```
+echo "Getting the code from GitHub"
+git clone https://github.com/nevishs/DockerLamp.git /tmp/DockerLamp
+cd /tmp/DockerLamp
+echo "Docker pull";
+docker pull nevishs/lamp-server;
+echo "Docker run";
+docker run -d -p 80:80 -p3306:3306 -v /tmp/DockerLamp/www:/var/www nevishs/lamp-server; sleep$
+echo "Done";
+```
+
+__Step 3__: Run the script
+```
+> ./dockerlamp.sh
+```
+
 
 ## Useful Commands:
 ```
