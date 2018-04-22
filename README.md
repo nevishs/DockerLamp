@@ -1,4 +1,4 @@
-# DockerLamp (Linux, Apache2, MySQL, PHP)
+# Docker Lamp (Linux, Apache2, MySQL, PHP)
 
 ## In this project you will:
 
@@ -21,15 +21,15 @@ __Step 1__: Clone the necessary files
 ```
 
 __Step 2__: Build the image
-> Note: lampserver -> repo name
+> Note: lamp-server -> repo name
 ```
-> docker build -t lampserver .
+> docker build -t lamp-server .
 ```
 
 __Step 3__: Create the container
-> Note: eb7afe2ea395 -> image id, lampserver -> repo name, /tmp/DockerLamp/www -> web files
+> Note: eb7afe2ea395 -> image id, lamp-server -> repo name, /tmp/DockerLamp/www -> web files
 ```
-> docker run --name eb7afe2ea395 -d -p 80:80 -p3306:3306 -v /tmp/DockerLamp/www:/var/www lampserver
+> docker run --name eb7afe2ea395 -d -p 80:80 -p3306:3306 -v /tmp/DockerLamp/www:/var/www lamp-server
 ```
 
 __Step 4__: Setup the database
@@ -49,10 +49,10 @@ __Step 5__: Interact with the site
 
 
 __Step 1__: Pull and Run the image
-> Note: nevishs/lampserver -> repo
+> Note: nevishs/lamp-server -> repo
 ```
-> docker pull nevishs/lampserver
-> docker run --name 83962226cfc5 -d -p 80:80 -p3306:3306 -v /tmp/DockerLamp/www:/var/www nevishs/lampserver
+> docker pull nevishs/lamp-server
+> docker run --name 83962226cfc5 -d -p 80:80 -p3306:3306 -v /tmp/DockerLamp/www:/var/www nevishs/lamp-server
 > http://127.0.0.1/install.php
 > http://127.0.0.1/public/
 ```
