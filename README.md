@@ -7,6 +7,10 @@
 * _Setup the web files and database._
 * _Interact with web software on your browser._
 
+OR 
+
+* _Pull and Run the image from docker HUB._
+
 ## Instructions:
 
 __Step 1__: Clone the necessary files
@@ -17,13 +21,13 @@ __Step 1__: Clone the necessary files
 ```
 
 __Step 2__: Build the image
-> Note: lampserver -> image name
+> Note: lampserver -> repo name
 ```
 > docker build -t lampserver .
 ```
 
 __Step 3__: Create the container
-> Note: eb7afe2ea395 -> image id, lampserver -> image name, /tmp/DockerLamp/www -> web files
+> Note: eb7afe2ea395 -> image id, lampserver -> repo name, /tmp/DockerLamp/www -> web files
 ```
 > docker run --name eb7afe2ea395 -d -p 80:80 -p3306:3306 -v /tmp/DockerLamp/www:/var/www lampserver
 ```
@@ -39,3 +43,18 @@ __Step 5__: Interact with the site
 ```
 > http://127.0.0.1/public/
 ```
+
+
+### OR
+
+
+__Step 1__: Pull and Run the image
+> Note: nevishs/lampserver -> repo
+```
+> docker pull nevishs/lampserver
+> docker run --name 83962226cfc5 -d -p 80:80 -p3306:3306 -v /tmp/DockerLamp/www:/var/www nevishs/lampserver
+> http://127.0.0.1/install.php
+> http://127.0.0.1/public/
+```
+
+
