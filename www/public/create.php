@@ -40,7 +40,11 @@ if (isset($_POST['submit'])) {
 <?php require "templates/header.php"; ?>
 
 <?php if (isset($_POST['submit']) && $statement) { ?>
-    <blockquote><?php echo $_POST['firstname']; ?> successfully added.</blockquote>
+   <blockquote>
+			<span style="color:salmon;font-weight:bold">
+				<?php echo $_POST['firstname']; ?> is added successfully.
+			</span>
+		</blockquote>
 <?php } ?>
 
 <h2>Add a user</h2>
