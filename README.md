@@ -77,26 +77,13 @@ __Step 2__: Pull and Run the image
 __Step 1__: Create script
 > Note: dokcerlamp.sh -> scirpt name
 ```
-> nano dokcerlamp.sh
-> chmod 755 dockerlamp.sh
+> wget https://github.com/nevishs/DockerLamp/blob/master/scripts/runDockerLamp.sh
+> chmod 755 runDockerLamp.sh
 ```
 
-__Step 2__: Prepare the script
-> Note: copy paste the following to the dockerlamp.sh 
+__Step 2__: Run the script
 ```
-echo "Getting the code from GitHub"
-git clone https://github.com/nevishs/DockerLamp.git /tmp/DockerLamp
-cd /tmp/DockerLamp
-echo "Docker pull";
-docker pull nevishs/lamp-server;
-echo "Docker run";
-docker run -d -p 80:80 -p3306:3306 -v /tmp/DockerLamp/www:/var/www nevishs/lamp-server; sleep$
-echo "Done";
-```
-
-__Step 3__: Run the script
-```
-> ./dockerlamp.sh
+> ./runDockerLamp.sh
 ```
 
 
