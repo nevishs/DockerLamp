@@ -74,17 +74,14 @@ __Step 2__: Pull and Run the image
 ### OR
 
 
-__Step 1__: Create script
-> Note: dokcerlamp.sh -> scirpt name
+__Step 1__: Get and Run the script
+> Note: runDockerLamp.sh -> scirpt name
 ```
 > wget https://github.com/nevishs/DockerLamp/blob/master/scripts/runDockerLamp.sh
 > chmod 755 runDockerLamp.sh
-```
-
-__Step 2__: Run the script
-```
 > ./runDockerLamp.sh
 ```
+
 
 
 ## Useful Commands:
