@@ -41,7 +41,7 @@ __Step 4__: Setup the database
 ```
 > http://127.0.0.1/install.php 
   OR 
-> curl http://localhost/install.php //on your docker machine
+> curl http://127.0.0.1/install.php //on your docker machine
 ```
 
 __Step 5__: Interact with the site
@@ -82,6 +82,10 @@ __Step 1__: Get and Run the script
 > ./runDockerLamp.sh
 ```
 
+__Step 2__: Check the site
+```
+> http://127.0.0.1/public/
+```
 
 
 ## Useful Commands:
